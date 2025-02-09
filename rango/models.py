@@ -7,7 +7,7 @@ class Category(models.Model):
     name = models.CharField(max_length=NAME_MAX_LENGTH, unique=True)
     views = models.IntegerField(default=0)
     likes = models.IntegerField(default=0)
-    slug = models.SlugField(unique=True)
+    slug = models.SlugField(unique=True, blank=True)
     
     def save(self, *args, **kwargs):
         # Testing chapter -- added test to ensure that views is non-negative.

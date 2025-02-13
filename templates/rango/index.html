@@ -21,7 +21,7 @@ hey there partner! <br />
                     <ul class="list-group">
                         {% for category in categories %}
                         <li class="list-group-item">
-                            <a href="{% url 'rango:show_category' category.slug %}">{{ category.name }}</a>
+                            <a href="{{ category.url }}">{{ category.name }}</a>
                         </li>
                         {% endfor %}
                     </ul>
@@ -49,6 +49,7 @@ hey there partner! <br />
                     {% endif %}
                     </p>
                 </div>
+                <a href="/rango/add_category/">Add a New Category</a><br />
             </div>
         </div>
     </div>

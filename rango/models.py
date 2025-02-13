@@ -11,7 +11,6 @@ class Category(models.Model):
 
 
     def save(self, *args, **kwargs):
-        # Testing chapter -- added test to ensure that views is non-negative.
         if self.views < 0:
             self.views = 0
         
